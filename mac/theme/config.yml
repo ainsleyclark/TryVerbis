@@ -1,0 +1,108 @@
+# |
+# |--------------------------------------------------------------------------
+# | Theme
+# |--------------------------------------------------------------------------
+# |
+# | Include a title, description and version for your custom Verbis
+# | theme here.
+# |
+# |
+theme:
+    title: A Verbis Theme
+    description: Stock theme for verbis
+    version: 0.0.1
+
+# |
+# |--------------------------------------------------------------------------
+# | Resources
+# |--------------------------------------------------------------------------
+# |
+# | Defines the resources to be used for the site. Each resource should
+# | contain a name (key) a friendly name (for use within the admin)
+# | a slug and an icon, if the icon is omitted, a default one
+# | will be used.
+# |
+# |
+resources:
+    posts:
+        name: posts
+        friendly_name: Posts
+        singular_name: Post
+        slug: /posts
+        icon: feather feather-clipboard
+    test:
+        name: test
+        friendly_name: test
+        singular_name: tests
+        slug: /tests
+        icon: feather feather-clipboard
+
+# |
+# |--------------------------------------------------------------------------
+# | Assets Path
+# |--------------------------------------------------------------------------
+# |
+# | The file path for the all static assets to be served by the CMS such as
+# | images, fonts, favicon etc. is not resolved by the cms. Note - it
+# | should not contain the file extension and is relative to the
+# | theme's root.
+# |
+# |
+assets_path: /assets
+
+
+# |
+# |--------------------------------------------------------------------------
+# | Editor
+# |--------------------------------------------------------------------------
+# |
+# |
+# |
+# |
+# |
+# |
+# |
+editor:
+    modules: [
+        blockquote,
+        code_block,
+        code_block_highlight,
+        code_view,
+        hardbreak,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        paragraph,
+        hr,
+        ul,
+        ol,
+        bold,
+        code,
+        italic,
+        link,
+        strike,
+        underline,
+        history,
+        search,
+        trailing_node,
+        color,
+        table
+    ]
+    options:
+        ul:
+            class: list
+        ol:
+            class: list
+        h1:
+            class: test
+        link:
+            rel: noopener noreferrer nofollow
+        palette: [
+            '#fad839',
+            '#ca1f26',
+            '#1b3990',
+            '#333',
+        ]

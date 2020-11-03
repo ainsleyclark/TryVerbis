@@ -1,2 +1,1 @@
-# TryVerbis
-Try Verbis!
+# Try Verbis
