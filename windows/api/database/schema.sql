@@ -26,9 +26,8 @@ CREATE TABLE `categories` (
   `slug` varchar(150) NOT NULL,
   `name` varchar(150) NOT NULL,
   `description` text,
-  `hidden` tinyint(1) NOT NULL DEFAULT '0',
+  `resource` varchar(150) NOT NULL,
   `parent_id` int DEFAULT NULL,
-  `page_template` varchar(150) DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -144,12 +143,12 @@ CREATE TABLE `roles` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `seo_meta_options`
+-- Table structure for table `post_options`
 --
 
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `seo_meta_options` (
+CREATE TABLE `post_options` (
   `id` int NOT NULL AUTO_INCREMENT,
   `page_id` int NOT NULL,
   `seo` json DEFAULT NULL,
