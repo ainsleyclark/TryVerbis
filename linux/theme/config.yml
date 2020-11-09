@@ -47,7 +47,7 @@ resources:
         friendly_name: Industries
         singular_name: Industry
         slug: /industries
-        icon: feather feather-trello
+        icon: feather feather-inbox
 
 
 # |
