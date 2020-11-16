@@ -28,6 +28,7 @@ CREATE TABLE `categories` (
   `description` text,
   `resource` varchar(150) NOT NULL,
   `parent_id` int DEFAULT NULL,
+  `archive_id` int DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -117,6 +118,7 @@ CREATE TABLE `posts` (
   `page_template` varchar(150) NOT NULL DEFAULT 'default',
   `layout` varchar(150)  NOT NULL DEFAULT 'default',
   `fields` json DEFAULT NULL,
+  /*`is_archive` BIT DEFAULT 0,*/
   `codeinjection_head` longtext,
   `codeinjection_foot` longtext,
   `user_id` int NOT NULL,
@@ -202,6 +204,7 @@ CREATE TABLE `users` (
   `twitter` text,
   `linked_in` text,
   `instagram` text,
+  `biography` longtext,
   `profile_picture_id` INT NULL,
   `token` varchar(38) NOT NULL,
   `token_last_used` timestamp NULL DEFAULT NULL,
