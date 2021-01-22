@@ -1,122 +1,14 @@
 {{ define "content" }}
 
-    {{ $result := posts (dict "resource" "team" "limit" 99999999 "order_direction" "asc") }}
-    <section class="section-padding section-padding-bottom">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-14 col-hd-12">
-                    <div class="row shuffle-cont">
-                        {{ with $result.Posts }}
-                            <!-- =====================
-                                 Directors
-                                 ===================== -->
-                            <div class="shuffle-item shuffle-item-sizer" data-groups='["directors"]'></div>
-                            <div class="shuffle-item shuffle-title margin-top" data-groups='["directors"]'>
-                                <div class="text-cont">
-                                    <h3 class="mb-0">Directors</h3>
-                                </div>
-                            </div>
-                            {{ range $post := . }}
-                                {{ $department := field "department" .Id | toString }}
-                                {{ if eq $department "directors"}}
-                                    {{ . }}
-                                {{ end }}
-                            {{ end }}
-                            <!-- =====================
-                                SEO Team
-                                ===================== -->
-                            <div class="shuffle-item shuffle-item-sizer" data-groups='["seo"]'></div>
-                            <div class="shuffle-item shuffle-title margin-top margin-large" data-groups='["seo"]'>
-                                <div class="text-cont">
-                                    <h3 class="mb-0">SEO Team</h3>
-                                </div>
-                            </div>
-                            {{ range $post := . }}
-                                {{ $department := field "department" .Id | toString }}
-                                {{ if eq $department "seo"}}
-                                    {{ . }}
-                                {{ end }}
-                            {{ end }}
-                            <!-- =====================
-                                 Content Team
-                                 ===================== -->
-                            <div class="shuffle-item shuffle-item-sizer" data-groups='["content"]'></div>
-                            <div class="shuffle-item shuffle-title margin-top margin-large" data-groups='["content"]'>
-                                <div class="text-cont">
-                                    <h3 class="mb-0">Content Team</h3>
-                                </div>
-                            </div>
-                            {{ range $post := . }}
-                                {{ $department := field "department" .Id | toString }}
-                                {{ if eq $department "content"}}
-                                    {{ . }}
-                                {{ end }}
-                            {{ end }}
-                            <!-- =====================
-                                Tech Team
-                                ===================== -->
-                            <div class="shuffle-item shuffle-item-sizer" data-groups='["tech"]'></div>
-                            <div class="shuffle-item shuffle-title margin-top margin-large" data-groups='["tech"]'>
-                                <div class="text-cont">
-                                    <h3 class="mb-0">Technology, Development<br> and Design team</h3>
-                                </div>
-                            </div>
-                            {{ range $post := . }}
-                                {{ $department := field "department" .Id | toString }}
-                                {{ if eq $department "tech" }}
-                                    {{ . }}
-                                {{ end }}
-                            {{ end }}
-                            <!-- =====================
-                                Production Team
-                                ===================== -->
-                            <div class="shuffle-item shuffle-item-sizer" data-groups='["production"]'></div>
-                            <div class="shuffle-item shuffle-title margin-top margin-large" data-groups='["production"]'>
-                                <div class="text-cont">
-                                    <h3 class="mb-0">Production team</h3>
-                                </div>
-                            </div>
-                            {{ range $post := . }}
-                                {{ $department := field "department" .Id | toString }}
-                                {{ if eq $department "production" }}
-                                    {{ . }}
-                                {{ end }}
-                            {{ end }}
-                            <!-- =====================
-                                Business Services Team
-                                ===================== -->
-                            <div class="shuffle-item shuffle-item-sizer" data-groups='["business"]'></div>
-                            <div class="shuffle-item shuffle-title margin-top margin-large" data-groups='["business"]'>
-                                <div class="text-cont">
-                                    <h3 class="mb-0">Business Services team</h3>
-                                </div>
-                            </div>
-                            {{ range $post := . }}
-                                {{ $department := field "department" .Id | toString }}
-                                {{ if eq $department "business" }}
-                                    {{ . }}
-                                {{ end }}
-                            {{ end }}
-                            <!-- =====================
-                                Paid Media
-                                ===================== -->
-                            <div class="shuffle-item shuffle-item-sizer" data-groups='["ppc"]'></div>
-                            <div class="shuffle-item shuffle-title margin-top margin-large" data-groups='["ppc"]'>
-                                <div class="text-cont">
-                                    <h3 class="mb-0">Paid Media</h3>
-                                </div>
-                            </div>
-                            {{ range $post := . }}
-                                {{ $department := field "department" .Id | toString }}
-                                {{ if eq $department "ppc" }}
-                                    {{ . }}
-                                {{ end }}
-                            {{ end }}
-                        {{ end }}
-                    </div><!-- /Shuffle Cont -->
-                </div><!-- /Col -->
-            </div><!-- /Row -->
-        </div><!-- /Container -->
-    </section>
 
-{{ end }}å
+    <div style="padding: 20px">
+        {{ .Post.Title }}
+        {{ $result := posts (dict "limit" 99999999 "order_direction" "asc") }}
+        HEY HEYggg
+
+        {{ .Post.Author.FirstName }}
+        {{ $result.Posts }}
+    </div>
+
+
+{{ end }}
