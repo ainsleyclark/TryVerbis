@@ -1,0 +1,99 @@
+{
+	"uuid": "01a1f614-b23a-11eb-8529-0242ac130003",
+	"title": "Content Blocks",
+	"fields": [
+		{
+			"uuid": "01a1f8c6-b23a-11eb-8529-0242ac130003",
+			"label": "Content Blocks",
+			"name": "content_blocks",
+			"type": "flexible",
+			"instructions": "Instructions",
+			"required": false,
+			"conditional_logic": null,
+			"wrapper": {
+				"width": 100
+			},
+			"layouts": {
+				"Products": {
+					"key": "dca00030-b7cb-11eb-8529-0242ac130003",
+					"name": "Products",
+					"label": "layoutlabel",
+					"display": "block",
+					"sub_fields": [
+						{
+							"uuid": "dca00260-b7cb-11eb-8529-0242ac130003",
+							"label": "Title",
+							"name": "title",
+							"type": "text",
+							"instructions": "Add a title for the section.",
+							"required": false,
+							"conditional_logic": null,
+							"wrapper": {
+								"width": 100
+							},
+							"options": {}
+						}
+					]
+				},
+				"TextBlocks": {
+					"key": "ce88249e-b7d7-11eb-8529-0242ac130003",
+					"name": "TextBlocks",
+					"label": "layoutlabel",
+					"display": "block",
+					"sub_fields": [
+						{
+
+							"uuid": "ce88278c-b7d7-11eb-8529-0242ac130003",
+							"label": "Text Blocks",
+							"name": "text_blocks",
+							"type": "flexible",
+							"instructions": "Text blocks make up the content of the page.",
+							"required": false,
+							"conditional_logic": null,
+							"wrapper": {
+								"width": 100
+							},
+							"layouts": {
+								"RichText": {
+									"key": "ce888678-b7d7-11eb-8529-0242ac130003",
+									"name": "RichText",
+									"label": "Rich Text",
+									"display": "block",
+									"sub_fields": [
+										{
+											"uuid": "ce888844-b7d7-11eb-8529-0242ac130003",
+											"label": "RichText",
+											"name": "text",
+											"type": "richtext",
+											"instructions": "",
+											"required": false,
+											"conditional_logic": null,
+											"wrapper": {
+												"width": 100
+											},
+											"options": {
+												"default_value": "default",
+												"tabs": "all",
+												"toolbar": "full",
+												"media_upload": 1
+											}
+										}
+									]
+								}
+							}
+						}
+					]
+				}
+			}
+		}
+	],
+	"location": [
+		[
+			{
+				"param": "page_template",
+				"operator": "==",
+				"value": "test"
+			}
+		]
+	]
+}
