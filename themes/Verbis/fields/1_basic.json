@@ -1,0 +1,77 @@
+{
+	"uuid": "6a4d7442-1020-490f-a3e2-436f9135bc24",
+	"title": "Basic Verbis Options",
+	"fields": [
+		{
+			"uuid": "b2fd1c5e-b7f3-11eb-8529-0242ac130003",
+			"label": "Text No Condit",
+			"name": "text_non",
+			"type": "text",
+			"instructions": "Instructions",
+			"required": false,
+			"conditional_logic": null,
+			"wrapper": {
+				"width": 50
+			},
+			"options": {
+				"maxlength": 10,
+				"default_value": "",
+				"placeholder": "Placeholder",
+				"prepend": "",
+				"append": ""
+			}
+		},
+		{
+			"uuid": "210d9990-b7f8-11eb-8529-0242ac130003",
+			"label": "Text No Condit 2",
+			"name": "text_non_two",
+			"type": "text",
+			"instructions": "Instructions",
+			"required": false,
+			"conditional_logic": null,
+			"wrapper": {
+				"width": 50
+			},
+			"options": {
+				"maxlength": 10,
+				"default_value": "",
+				"placeholder": "Placeholder",
+				"prepend": "",
+				"append": ""
+			}
+		},
+		{
+			"uuid": "39ca0ea0-c911-4eaa-b6e0-67dfd99e5725",
+			"label": "Text",
+			"name": "text",
+			"type": "text",
+			"instructions": "Instructions",
+			"required": false,
+			"conditional_logic": [
+				[
+					{
+						"field": "b2fd1c5e-b7f3-11eb-8529-0242ac130003",
+						"operator": "!=",
+						"value": "Hello"
+					},
+					{
+						"field": "210d9990-b7f8-11eb-8529-0242ac1300033",
+						"operator": "!=",
+						"value": "Fuck"
+					}
+				]
+			],
+			"wrapper": {
+				"width": 50
+			},
+			"options": {
+				"maxlength": 10,
+				"default_value": "",
+				"placeholder": "Placeholder",
+				"prepend": "",
+				"append": ""
+			}
+		}
+	],
+	"location": []
+}
